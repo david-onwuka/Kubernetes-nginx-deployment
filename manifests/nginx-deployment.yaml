@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: nginx-yaml-deploy
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: nginx
+
+  template:
+    metadata:
+      labels:
+        app: nginx
+
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.28
+          ports:
+            - containerPort: 80
+
+          env:
+            - name: APP_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: nginx-config
+                  key: APP_ENV
+
+            - name: MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: nginx-config
+                  key: MESSAGE
