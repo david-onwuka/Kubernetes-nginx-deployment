@@ -171,7 +171,7 @@ kubectl describe pod <pod-name>
 
 ---
 
-## 💻 Author
+##  Author
 
 David Onwuka
 
@@ -179,7 +179,7 @@ David Onwuka
 
 ##  Project Status
 
-✔️uccessfully deployed on Minikube  
-✔️ully functional Kubernetes application  
+Successfully deployed on Minikube  
+Fully functional Kubernetes application  
 Tested and validated using kubectl  
 Ready for portfolio demonstration
